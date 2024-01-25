@@ -1,0 +1,3 @@
+/home/mario/Projects/sandbox/mujoco_simulation_cpp/build/CMakeFiles/control.dir
+/home/mario/Projects/sandbox/mujoco_simulation_cpp/build/CMakeFiles/edit_cache.dir
+/home/mario/Projects/sandbox/mujoco_simulation_cpp/build/CMakeFiles/rebuild_cache.dir
