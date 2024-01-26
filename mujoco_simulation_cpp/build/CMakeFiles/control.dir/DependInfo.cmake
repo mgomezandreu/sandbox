@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/mario/Projects/sandbox/mujoco_simulation_cpp/src/controllers.cpp" "CMakeFiles/control.dir/controllers.cpp.o" "gcc" "CMakeFiles/control.dir/controllers.cpp.o.d"
   "/home/mario/Projects/sandbox/mujoco_simulation_cpp/src/main.cpp" "CMakeFiles/control.dir/main.cpp.o" "gcc" "CMakeFiles/control.dir/main.cpp.o.d"
   "/home/mario/Projects/sandbox/mujoco_simulation_cpp/src/simulation.cpp" "CMakeFiles/control.dir/simulation.cpp.o" "gcc" "CMakeFiles/control.dir/simulation.cpp.o.d"
   )

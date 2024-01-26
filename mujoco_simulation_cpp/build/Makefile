@@ -129,6 +129,30 @@ control/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/build
 .PHONY : control/fast
 
+controllers.o: controllers.cpp.o
+.PHONY : controllers.o
+
+# target to build an object file
+controllers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/controllers.cpp.o
+.PHONY : controllers.cpp.o
+
+controllers.i: controllers.cpp.i
+.PHONY : controllers.i
+
+# target to preprocess a source file
+controllers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/controllers.cpp.i
+.PHONY : controllers.cpp.i
+
+controllers.s: controllers.cpp.s
+.PHONY : controllers.s
+
+# target to generate assembly for a file
+controllers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/controllers.cpp.s
+.PHONY : controllers.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... control"
+	@echo "... controllers.o"
+	@echo "... controllers.i"
+	@echo "... controllers.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

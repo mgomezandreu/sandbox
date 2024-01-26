@@ -48,22 +48,17 @@ void Simulation::run_simulation(std::string path, void (*controller)(const mjMod
 		while( d->time - simstart < 1.0/60.0 )
 			mj_step(m, d);
 
-		// get framebuffer viewport
 		mjrRect viewport = {0, 0, 0, 0};
 		glfwGetFramebufferSize(window, &viewport.width, &viewport.height);
 
-		// update scene and render
 		mjv_updateScene(m, d, &opt, NULL, &cam, mjCAT_ALL, &scn);
 		mjr_render(viewport, &scn, &con);
 
-		// swap OpenGL buffers (blocking call due to v-sync)
 		glfwSwapBuffers(window);
 
-		// process pending GUI events, call GLFW callbacks
 		glfwPollEvents();
 	}
 
-	// close GLFW, free visualization storage
 	glfwTerminate();
 	mjv_freeScene(&scn);
 	mjr_freeContext(&con);
