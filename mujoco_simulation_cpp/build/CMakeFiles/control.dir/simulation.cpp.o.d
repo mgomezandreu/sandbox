@@ -1,5 +1,5 @@
-CMakeFiles/control.dir/main.cpp.o: \
- /home/mario/Projects/sandbox/mujoco_simulation_cpp/src/main.cpp \
+CMakeFiles/control.dir/simulation.cpp.o: \
+ /home/mario/Projects/sandbox/mujoco_simulation_cpp/src/simulation.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -145,9 +145,7 @@ CMakeFiles/control.dir/main.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc /usr/include/GLFW/glfw3.h \
- /usr/include/GL/gl.h /usr/include/GL/glext.h \
- /usr/include/KHR/khrplatform.h \
+ /usr/include/c++/11/bits/istream.tcc \
  /home/mario/Projects/sandbox/mujoco_simulation_cpp/src/../include/mujoco/mujoco.h \
  /home/mario/Projects/sandbox/mujoco_simulation_cpp/src/../include/mujoco/mjexport.h \
  /usr/include/c++/11/stdlib.h /usr/include/c++/11/math.h \
@@ -181,6 +179,8 @@ CMakeFiles/control.dir/main.cpp.o: \
  /home/mario/Projects/sandbox/mujoco_simulation_cpp/src/../include/mujoco/mjrender.h \
  /home/mario/Projects/sandbox/mujoco_simulation_cpp/src/../include/mujoco/mjui.h \
  /home/mario/Projects/sandbox/mujoco_simulation_cpp/src/../include/mujoco/mjvisualize.h \
- /usr/include/c++/11/numbers \
+ /usr/include/GLFW/glfw3.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
+ /usr/include/KHR/khrplatform.h \
  /home/mario/Projects/sandbox/mujoco_simulation_cpp/src/../include/simulation.h \
- /home/mario/Projects/sandbox/mujoco_simulation_cpp/src/../include/mujoco/mujoco.h
+ /home/mario/Projects/sandbox/mujoco_simulation_cpp/src/../include/mujoco/mujoco.h \
+ /usr/include/c++/11/numbers

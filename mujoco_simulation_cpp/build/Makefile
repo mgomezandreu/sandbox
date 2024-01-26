@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+simulation.o: simulation.cpp.o
+.PHONY : simulation.o
+
+# target to build an object file
+simulation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/simulation.cpp.o
+.PHONY : simulation.cpp.o
+
+simulation.i: simulation.cpp.i
+.PHONY : simulation.i
+
+# target to preprocess a source file
+simulation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/simulation.cpp.i
+.PHONY : simulation.cpp.i
+
+simulation.s: simulation.cpp.s
+.PHONY : simulation.s
+
+# target to generate assembly for a file
+simulation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/simulation.cpp.s
+.PHONY : simulation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... simulation.o"
+	@echo "... simulation.i"
+	@echo "... simulation.s"
 .PHONY : help
 
 

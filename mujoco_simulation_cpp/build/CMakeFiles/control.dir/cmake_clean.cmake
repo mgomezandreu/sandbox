@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/control.dir/main.cpp.o"
   "CMakeFiles/control.dir/main.cpp.o.d"
+  "CMakeFiles/control.dir/simulation.cpp.o"
+  "CMakeFiles/control.dir/simulation.cpp.o.d"
   "control"
   "control.pdb"
 )

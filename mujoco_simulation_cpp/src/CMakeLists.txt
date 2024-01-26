@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
 project(control)
 
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} main.cpp
+    simulation.cpp
+)
 find_package(PkgConfig REQUIRED)
 
 set(CMAKE_CXX_STANDARD 11)
