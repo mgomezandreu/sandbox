@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/control.dir/main.cpp.o -o control  -Wl,-rpath,/home/mario/Projects/sandbox/mujoco_simulation_cpp/src/../lib /home/mario/Projects/sandbox/mujoco_simulation_cpp/src/../lib/libmujoco.so 
+/usr/bin/c++ CMakeFiles/control.dir/main.cpp.o -o control  -Wl,-rpath,/home/mario/Projects/sandbox/mujoco_simulation_cpp/src/../lib /home/mario/Projects/sandbox/mujoco_simulation_cpp/src/../lib/libmujoco.so -lglfw 

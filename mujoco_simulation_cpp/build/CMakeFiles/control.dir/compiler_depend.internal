@@ -12,6 +12,10 @@ CMakeFiles/control.dir/main.cpp.o
  /home/mario/Projects/sandbox/mujoco_simulation_cpp/include/mujoco/mjui.h
  /home/mario/Projects/sandbox/mujoco_simulation_cpp/include/mujoco/mjvisualize.h
  /home/mario/Projects/sandbox/mujoco_simulation_cpp/include/mujoco/mujoco.h
+ /usr/include/GL/gl.h
+ /usr/include/GL/glext.h
+ /usr/include/GLFW/glfw3.h
+ /usr/include/KHR/khrplatform.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
