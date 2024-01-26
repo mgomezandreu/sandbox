@@ -4,10 +4,12 @@
 
 #include "mujoco/mujoco.h"
 
+#include <numbers> 
 
 
 
-int vis_test(){
+
+int run_simulation(){
 
 	char* errstr;
 	int errstr_sz;
@@ -72,27 +74,32 @@ int vis_test(){
 	return 0;
 }
 
+void simple_constant_controller(const mjModel* m, mjData* d){
+	// Apply a constant torque to the joint
+
+	// Get sensor data for joint
+	mjtNum joint_pos = d->qpos[0];
+	mjtNum joint_vel = d->qvel[0];
+
+	std::cout << "Joint position: " << joint_pos << std::endl;
+	std::cout << "Joint velocity: " << joint_vel << std::endl;
+
+	// Apply pd gain
+	mjtNum kp = 2;
+	mjtNum kd = 0.1;
+
+	mjtNum joint_pos_des = 3.14 /4;
+
+	mjtNum tau = kp * (joint_pos_des - joint_pos) + kd * (0 - joint_vel);
+
+	d->ctrl[0] = tau;
+}
+
 
 int main(){
-	std::cout << "Hello Mujoco!" << std::endl;
 
-	
-	// char* errstr;
-	// int errstr_sz;
-	// mjModel* m = mj_loadXML("../models/inverted_pendulum.xml", NULL, errstr, errstr_sz);
-	// mjData* d = mj_makeData(m);
-
-
-	// while(d->time <10){
-	// 	mj_step(m,d);
-	// 	std::cout << "Stepping " << d->time << std::endl;
-	// }
-
-
-	// mj_deleteModel(m);
-	// mj_deleteData(d);
-
-	vis_test();
+	mjcb_control = simple_constant_controller;
+	run_simulation();
 	
 
 	return 0;
