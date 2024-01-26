@@ -14,7 +14,7 @@ int run_simulation(){
 	char* errstr;
 	int errstr_sz;
 
-	mjModel* m = mj_loadXML("../models/inverted_pendulum.xml", NULL, errstr, errstr_sz);
+	mjModel* m = mj_loadXML("../models/quadrotor_plus.xml", NULL, errstr, errstr_sz);
 	mjData* d = mj_makeData(m);
 	mjvCamera cam;                      // abstract camera
 	mjvOption opt;                      // visualization options
@@ -77,7 +77,7 @@ int run_simulation(){
 void simple_constant_controller(const mjModel* m, mjData* d){
 	// Apply a constant torque to the joint
 
-	// Get sensor data for joint
+	//Get sensor data for joint
 	mjtNum joint_pos = d->qpos[0];
 	mjtNum joint_vel = d->qvel[0];
 
