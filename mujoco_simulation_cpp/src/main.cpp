@@ -33,9 +33,9 @@ void simple_constant_controller(const mjModel* m, mjData* d){
 
 int main(){
 
-	mjcb_control = simple_constant_controller;
-	Simulation::run_simulation();
-	
+	//mjcb_control = simple_constant_controller;
 
+	Simulation::run_simulation("../models/inverted_pendulum.xml", nullptr);
+	
 	return 0;
 }
