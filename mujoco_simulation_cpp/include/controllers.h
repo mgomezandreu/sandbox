@@ -1,29 +1,16 @@
-#pragma once
-#include <string>
+#ifndef CONTROLLERS_H
+#define CONTROLLERS_H
 
 #include "mujoco/mujoco.h"
 
-class Controller{
-    public:
-    virtual void control(const mjModel* m, mjData* d) = 0;
-};
-class InvPendPIDController : public Controller{
-    public:
-        InvPendPIDController();
-        InvPendPIDController(mjtNum kp, mjtNum kd, mjtNum ki, mjtNum joint_pos_des);
-        virtual void control(const mjModel* m, mjData* d);
+namespace InvertedPendulum{
+    extern mjtNum kp;
+    extern mjtNum kd;
+    extern mjtNum ki;
+    extern mjtNum joint_pos_des;
+    extern mjtNum integral;
 
-    private:    
-        mjtNum kp = 2;
-        mjtNum kd = 0.1;
-        mjtNum ki = 0.1;
-        mjtNum integral = 0;
-        mjtNum joint_pos_des = 3.14 /4;
+    void control(const mjModel *m, mjData *d);
+}
 
-
-};
-
-class DroneController : public Controller{
-    public:
-    virtual void control(const mjModel* m, mjData* d);
-};
+#endif // CONTROLLERS_Hm

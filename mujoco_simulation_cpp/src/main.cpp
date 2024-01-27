@@ -6,20 +6,16 @@
 #include "controllers.h"
 
 
-#include <cmath>
-
-namespace std {
-	namespace numbers {
-        double pi = atan(1.0) * 4.0;
-    }
-}
-
-
-
 int main(){
-	
-	InvPendPIDController controller(2, 0.1, 0.1, std::numbers::pi / 4);
-	Simulation::run_simulation("../models/inverted_pendulum.xml", controller.control);
-	
+
+	InvertedPendulum::kp = 100;
+	InvertedPendulum::kd = 10;
+	InvertedPendulum::ki = 0;
+	InvertedPendulum::joint_pos_des = 0.5;
+	InvertedPendulum::integral = 0;
+
+	Simulation::run_simulation(
+			"../models/inverted_pendulum.xml",
+			InvertedPendulum::control);
 	return 0;
 }
