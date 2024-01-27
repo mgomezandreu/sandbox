@@ -13,4 +13,10 @@ namespace InvertedPendulum{
     void control(const mjModel *m, mjData *d);
 }
 
+
+namespace DroneStabilization{
+    void init();
+    void control(const mjModel *m, mjData *d);
+}
+
 #endif // CONTROLLERS_Hm

@@ -14,6 +14,10 @@ void Simulation::run_simulation(std::string path, void (*controller)(const mjMod
     if (!m) mju_error_s("Load model error: %s", error);
     d = mj_makeData(m);
 
+	// Print all information about the model
+	mj_printModel(m, "model.txt");
+
+
 
     if (controller != nullptr){
         mjcb_control = controller;

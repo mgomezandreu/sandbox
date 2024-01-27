@@ -14,8 +14,10 @@ int main(){
 	InvertedPendulum::joint_pos_des = 0.5;
 	InvertedPendulum::integral = 0;
 
+
+	DroneStabilization::init();
 	Simulation::run_simulation(
-			"../models/inverted_pendulum.xml",
-			InvertedPendulum::control);
+			"../models/quadrotor_plus.xml",
+			DroneStabilization::control);
 	return 0;
 }
