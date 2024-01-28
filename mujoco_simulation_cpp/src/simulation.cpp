@@ -49,7 +49,7 @@ void Simulation::run_simulation(std::string path, void (*controller)(const mjMod
 
 	while( !glfwWindowShouldClose(window) ) {
 		mjtNum simstart = d->time;
-		while( d->time - simstart < 1.0/60.0 )
+		while( d->time - simstart < 1.0/60.0)
 			mj_step(m, d);
 
 		mjrRect viewport = {0, 0, 0, 0};

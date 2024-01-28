@@ -5,6 +5,9 @@
 #include <algorithm>
 
 #include <eigen3/Eigen/Dense>
+#include <eigen3/Eigen/Geometry>
+
+
 
 
 
@@ -39,11 +42,12 @@ namespace DroneStabilization{
     // Drone Model:
     // qpos = [x, y, z, ...]
 
-    mjtNum z_des = 0.2;
+    mjtNum z_des = 0.1;
     mjtNum x_des = 0.1;
     mjtNum y_des = 0.1;
-    mjtNum kp = 100;
-    mjtNum kd = 10;
+    mjtNum kpx = 1;
+    mjtNum kpz = 10;
+    mjtNum kd = 1;
 
     mjtNum mass = 0.28;
     mjtNum g = 9.81;
@@ -64,62 +68,78 @@ namespace DroneStabilization{
 
     void init(){
         A << 1, 1, 1, 1,
-         0, 1, 0, -1,
-         -1, 0, 1, 0,
-         1, -1, 1, -1;
+          0, .12,0,-.12,
+         -.12, 0, .12, 0,
+         -.1, .1, -.1, .1;
     }
 
     Eigen::Vector3d pos_des(double t){
         Eigen::Vector3d pos;
         pos << 0,0, z_des + 0.1 * sin(t);
-        //pos << x_des + 0.1* sin(t),y_des + 0.1 * sin(t), z_des + 0.1 * sin(t);
         return pos;
     }
-
-
     
     void control(const mjModel *m, mjData *d){
+        //clear console
+        system("clear");
+
         // Define system state
         // Position and velocity
         mjtNum time = d->time;
 
         Eigen::Vector3d pos;
         pos << d->qpos[0], d->qpos[1], d->qpos[2];
-        Eigen::Vector3d pos_dot;
-        pos_dot << d->qvel[0], d->qvel[1], d->qvel[2];
+        Eigen::Vector3d v;
+        v << d->qvel[0], d->qvel[1], d->qvel[2];
 
         // Orientation and angular velocity
-        Eigen::Vector3d euler;
-        euler << d->qpos[3], d->qpos[4], d->qpos[5];
-        Eigen::Vector3d euler_dot;
-        euler_dot << d->qvel[3], d->qvel[4], d->qvel[5];
+        Eigen::Quaterniond q(d->qpos[3], d->qpos[4], d->qpos[5], d->qpos[6]);
+        Eigen::Vector3d euler_angles = q.toRotationMatrix().eulerAngles(2, 1, 0).reverse();
+
+        // Extract roll, pitch, and yaw
+        double roll = std::fmod(euler_angles[0] + M_PI, 2 * M_PI) - M_PI;
+        double pitch = std::fmod(euler_angles[1] + M_PI, 2 * M_PI) - M_PI;
+        double yaw = std::fmod(euler_angles[2] + M_PI, 2 * M_PI) - M_PI;
+
+        // Print the results
+        std::cout << "Quaternion: " << q.coeffs().transpose() << std::endl;
+        std::cout << "Roll: " << roll << " Pitch: " << pitch << " Yaw: " << yaw << std::endl;
+
+        Eigen::Vector3d ang_vel;
+        ang_vel << d->qvel[3], d->qvel[4], d->qvel[5];
 
         Eigen::Vector3d v_des;
-        v_des = kp*(pos_des(time) - pos);
-
-        // Calculate the desired orientation
-        mjtNum phi_des = kp*(v_des[0] - pos_dot[0]);
-        mjtNum theta_des = kp*(v_des[1] - pos_dot[1]);
-        mjtNum psi_des = 0;
+        std::cout << "pos: " << pos_des(time).transpose() -pos.transpose() << std::endl;
+        v_des = pos_des(time) - pos;
+        // // Calculate the desired orientation
+        mjtNum roll_des = 0;//std::clamp(v_des[1] - v[1], -0.0872665, 0.0872665);
+        mjtNum pitch_des =  0;//std::clamp(v_des[0] - v[0], -0.0872665 , 0.0872665);
+        mjtNum yaw_des = 0.5;
         
 
+
+        
         Eigen::Vector4d U;
-        U << mass *g + kp*(v_des[2] - pos_dot[2]),
-            kp*(phi_des - euler[0]) - kd*euler_dot[0],
-            kp*(theta_des - euler[1]- kd*euler_dot[1]),
-            kp*(psi_des - euler[2] - kd*euler_dot[2]);
-
-        Eigen::Vector4d F = A.inverse()*U;
+        U << mass *g + kpz*(v_des[2] - v[2]), 
+            0,//0,//0.0001*(theta_des - euler[0]) - ang_vel[0],
+            0,//0.1*(roll_des - roll) - ang_vel[0],// 0.0001*(theta_des - euler[1]) - ang_vel[1],
+            (yaw_des - yaw) - ang_vel[2];
 
         
-        std::cout << "F: " << F << std::endl;   
+        // std::cout << "A:" << A.inverse() << std::endl;
 
+    
+        Eigen::Vector4d F = A.inverse()*U;
+        // set F to sqrt(F) to get thrust
+        for (int i = 0; i < 4; i++){
+            F[i] = std::sqrt(std::clamp(F[i], min_thrust, max_thrust));
+        }
 
         // set constant trust to all rotors
         for (int i = 0; i < 4; i++){
             d->ctrl[i] = std::clamp(F[i], min_thrust, max_thrust);
         }
 
-    
+
     }
 }

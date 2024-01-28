@@ -50,12 +50,12 @@ totalmass             0.28
 meaninertia           0.14    
 meanmass              0.031   
 meansize              0.042   
-extent                3.6     
-center                0        0        1.3     
+extent                1       
+center                0        0        0       
 
-qpos0                 0         0         3         1         0         0         0        
+qpos0                 0         0         0.2       1         0         0         0        
 
-qpos_spring           0         0         3         1         0         0         0        
+qpos_spring           0         0         0.2       1         0         0         0        
 
 
 BODY 0:
@@ -96,7 +96,7 @@ BODY 1:
   body_geomadr          1 
   body_simple           0 
   body_sameframe        0 
-  body_pos              0         0         3        
+  body_pos              0         0         0.2      
   body_quat             1         0         0         0        
   body_ipos             0         0         0        
   body_iquat            0         0.71      0         0.71     
@@ -801,7 +801,7 @@ SITE 3:
   site_rgba             0.3       0.8       0.3       1        
 
 SITE 4:
-  name                  motor1
+  name                  motor2
   site_type             5 
   site_bodyid           5 
   site_matid            -1 
@@ -813,7 +813,7 @@ SITE 4:
   site_rgba             0.3       0.8       0.3       1        
 
 SITE 5:
-  name                  motor2
+  name                  motor1
   site_type             5 
   site_bodyid           7 
   site_matid            -1 
@@ -847,7 +847,7 @@ LIGHT 0:
   light_active          1 
   light_pos             0         0         1.3      
   light_dir            -0         0        -1        
-  light_poscom0         0         0        -1.7      
+  light_poscom0         0         0         1.1      
   light_pos0            0         0         1.3      
   light_dir0           -0         0        -1        
   light_attenuation     1         0         0        
@@ -933,7 +933,7 @@ ACTUATOR 1:
   actuator_dyntype      0 
   actuator_gaintype     0 
   actuator_biastype     0 
-  actuator_trnid        4  -1 
+  actuator_trnid        5  -1 
   actuator_group        0 
   actuator_ctrllimited  1 
   actuator_forcelimited 0 
@@ -957,7 +957,7 @@ ACTUATOR 2:
   actuator_dyntype      0 
   actuator_gaintype     0 
   actuator_biastype     0 
-  actuator_trnid        5  -1 
+  actuator_trnid        4  -1 
   actuator_group        0 
   actuator_ctrllimited  1 
   actuator_forcelimited 0 
