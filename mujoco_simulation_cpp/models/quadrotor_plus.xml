@@ -70,9 +70,9 @@ Front: Along body X-axis
     </worldbody>
 
     <actuator>
-        <motor ctrllimited="true" ctrlrange="0 1" gear="0  0. 1. 0. 0. -0.1" site="motor0"/>
-        <motor ctrllimited="true" ctrlrange="0 1" gear="0  0. 1. 0. 0.  0.1" site="motor1"/>
-        <motor ctrllimited="true" ctrlrange="0 1" gear="0  0. 1. 0. 0. -0.1" site="motor2"/>
-        <motor ctrllimited="true" ctrlrange="0 1" gear="0  0. 1. 0. 0.  0.1" site="motor3"/>
+        <motor ctrllimited="true" ctrlrange="0 10" gear="0  0. 1. 0. 0. -0.1" site="motor0"/>
+        <motor ctrllimited="true" ctrlrange="0 10" gear="0  0. 1. 0. 0.  0.1" site="motor1"/>
+        <motor ctrllimited="true" ctrlrange="0 10" gear="0  0. 1. 0. 0. -0.1" site="motor2"/>
+        <motor ctrllimited="true" ctrlrange="0 10" gear="0  0. 1. 0. 0.  0.1" site="motor3"/>
     </actuator>
 </mujoco>

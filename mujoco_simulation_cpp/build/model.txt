@@ -917,7 +917,7 @@ ACTUATOR 0:
   actuator_dynprm       1         0         0         0         0         0         0         0         0         0        
   actuator_gainprm      1         0         0         0         0         0         0         0         0         0        
   actuator_biasprm      0         0         0         0         0         0         0         0         0         0        
-  actuator_ctrlrange    0         1        
+  actuator_ctrlrange    0         10       
   actuator_forcerange   0         0        
   actuator_actrange     0         0        
   actuator_gear         0         0         1         0         0        -0.1      
@@ -941,7 +941,7 @@ ACTUATOR 1:
   actuator_dynprm       1         0         0         0         0         0         0         0         0         0        
   actuator_gainprm      1         0         0         0         0         0         0         0         0         0        
   actuator_biasprm      0         0         0         0         0         0         0         0         0         0        
-  actuator_ctrlrange    0         1        
+  actuator_ctrlrange    0         10       
   actuator_forcerange   0         0        
   actuator_actrange     0         0        
   actuator_gear         0         0         1         0         0         0.1      
@@ -965,7 +965,7 @@ ACTUATOR 2:
   actuator_dynprm       1         0         0         0         0         0         0         0         0         0        
   actuator_gainprm      1         0         0         0         0         0         0         0         0         0        
   actuator_biasprm      0         0         0         0         0         0         0         0         0         0        
-  actuator_ctrlrange    0         1        
+  actuator_ctrlrange    0         10       
   actuator_forcerange   0         0        
   actuator_actrange     0         0        
   actuator_gear         0         0         1         0         0        -0.1      
@@ -989,7 +989,7 @@ ACTUATOR 3:
   actuator_dynprm       1         0         0         0         0         0         0         0         0         0        
   actuator_gainprm      1         0         0         0         0         0         0         0         0         0        
   actuator_biasprm      0         0         0         0         0         0         0         0         0         0        
-  actuator_ctrlrange    0         1        
+  actuator_ctrlrange    0         10       
   actuator_forcerange   0         0        
   actuator_actrange     0         0        
   actuator_gear         0         0         1         0         0         0.1      
