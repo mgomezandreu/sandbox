@@ -129,6 +129,30 @@ control/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/build
 .PHONY : control/fast
 
+angles.o: angles.cpp.o
+.PHONY : angles.o
+
+# target to build an object file
+angles.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/angles.cpp.o
+.PHONY : angles.cpp.o
+
+angles.i: angles.cpp.i
+.PHONY : angles.i
+
+# target to preprocess a source file
+angles.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/angles.cpp.i
+.PHONY : angles.cpp.i
+
+angles.s: angles.cpp.s
+.PHONY : angles.s
+
+# target to generate assembly for a file
+angles.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/angles.cpp.s
+.PHONY : angles.cpp.s
+
 controllers.o: controllers.cpp.o
 .PHONY : controllers.o
 
@@ -210,6 +234,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... control"
+	@echo "... angles.o"
+	@echo "... angles.i"
+	@echo "... angles.s"
 	@echo "... controllers.o"
 	@echo "... controllers.i"
 	@echo "... controllers.s"

@@ -4,6 +4,7 @@ project(control)
 add_executable(${PROJECT_NAME} main.cpp
     simulation.cpp
     controllers.cpp
+    angles.cpp
 )
 find_package(PkgConfig REQUIRED)
 

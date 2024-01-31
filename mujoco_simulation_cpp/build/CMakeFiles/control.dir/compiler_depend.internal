@@ -3,6 +3,7 @@
 
 CMakeFiles/control.dir/controllers.cpp.o
  /home/mario/Projects/sandbox/mujoco_simulation_cpp/src/controllers.cpp
+ /home/mario/Projects/sandbox/mujoco_simulation_cpp/include/angles.h
  /home/mario/Projects/sandbox/mujoco_simulation_cpp/include/controllers.h
  /home/mario/Projects/sandbox/mujoco_simulation_cpp/include/mujoco/mjdata.h
  /home/mario/Projects/sandbox/mujoco_simulation_cpp/include/mujoco/mjexport.h

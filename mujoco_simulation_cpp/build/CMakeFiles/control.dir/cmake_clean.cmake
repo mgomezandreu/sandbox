@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/control.dir/angles.cpp.o"
+  "CMakeFiles/control.dir/angles.cpp.o.d"
   "CMakeFiles/control.dir/controllers.cpp.o"
   "CMakeFiles/control.dir/controllers.cpp.o.d"
   "CMakeFiles/control.dir/main.cpp.o"

@@ -99,6 +99,7 @@ CMakeFiles/control.dir/controllers.cpp.o: \
  /home/mario/Projects/sandbox/mujoco_simulation_cpp/src/../include/mujoco/mjvisualize.h \
  /home/mario/Projects/sandbox/mujoco_simulation_cpp/src/../include/controllers.h \
  /home/mario/Projects/sandbox/mujoco_simulation_cpp/src/../include/mujoco/mujoco.h \
+ /home/mario/Projects/sandbox/mujoco_simulation_cpp/src/../include/angles.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
  /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
  /usr/include/c++/11/bits/stringfwd.h \
