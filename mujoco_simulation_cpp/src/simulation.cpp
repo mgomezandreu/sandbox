@@ -47,8 +47,30 @@ void Simulation::run_simulation(std::string path, void (*controller)(const mjMod
 
 	mjr_makeContext(m, &con, mjFONTSCALE_100);
 
+
+	// get drone body id
+	int drone_body_id = mj_name2id(m, mjOBJ_BODY, "core");
+
+	cam.type = mjCAMERA_TRACKING;
+	cam.fixedcamid = -1;
+	cam.trackbodyid = drone_body_id;	
+	cam.distance = 3;
+	cam.azimuth = 0;
+	cam.elevation = -30;
+	cam.lookat[0] = 0;
+	cam.lookat[1] = 0;
+	cam.lookat[2] = 0.1;
+
+
+
 	while( !glfwWindowShouldClose(window) ) {
 		mjtNum simstart = d->time;
+		//print drone position
+		std::cout << "Drone position: " << d->qpos[0] << std::endl;
+
+		// set camera to follow quadrotor
+
+
 		while( d->time - simstart < 1.0/60.0)
 			mj_step(m, d);
 
