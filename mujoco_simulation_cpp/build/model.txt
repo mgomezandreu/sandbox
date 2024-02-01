@@ -7,18 +7,20 @@ nu                    4
 nbody                 14
 njnt                  1
 ngeom                 18
-nsite                 7
+nsite                 15
 nlight                1
 ntex                  3
 ntexdata              500322
 nmat                  2
-nnames                288
+nsensor               8
+nnames                448
 nM                    21
 nD                    36
 njmax                 -1
 nconmax               -1
-nstack                1680929
-nbuffer               518816
+nstack                1681089
+nsensordata           8
+nbuffer               520576
 
 timestep              0.01    
 apirate               1e+02   
@@ -949,6 +951,102 @@ GEOM 17:
 
 
 SITE 0:
+  name                  lidar_site_0
+  site_type             2 
+  site_bodyid           1 
+  site_matid            -1 
+  site_group            0 
+  site_sameframe        0 
+  site_size             0.005     0.005     0.005    
+  site_pos              0         0         0.05     
+  site_quat             0.71      0         0.71      0        
+  site_rgba             0.5       0.5       0.5       1        
+
+SITE 1:
+  name                  lidar_site_1
+  site_type             2 
+  site_bodyid           1 
+  site_matid            -1 
+  site_group            0 
+  site_sameframe        0 
+  site_size             0.005     0.005     0.005    
+  site_pos              0         0         0.05     
+  site_quat             0.71     -0.71      0         0        
+  site_rgba             0.5       0.5       0.5       1        
+
+SITE 2:
+  name                  lidar_site_2
+  site_type             2 
+  site_bodyid           1 
+  site_matid            -1 
+  site_group            0 
+  site_sameframe        0 
+  site_size             0.005     0.005     0.005    
+  site_pos              0         0         0.05     
+  site_quat             0.71      0        -0.71      0        
+  site_rgba             0.5       0.5       0.5       1        
+
+SITE 3:
+  name                  lidar_site_3
+  site_type             2 
+  site_bodyid           1 
+  site_matid            -1 
+  site_group            0 
+  site_sameframe        0 
+  site_size             0.005     0.005     0.005    
+  site_pos              0         0         0.05     
+  site_quat             0.71      0.71      0        -0        
+  site_rgba             0.5       0.5       0.5       1        
+
+SITE 4:
+  name                  lidar_site_4
+  site_type             2 
+  site_bodyid           1 
+  site_matid            -1 
+  site_group            0 
+  site_sameframe        0 
+  site_size             0.005     0.005     0.005    
+  site_pos              0         0         0.05     
+  site_quat             0.71      0.71      0         0        
+  site_rgba             0.5       0.5       0.5       1        
+
+SITE 5:
+  name                  lidar_site_5
+  site_type             2 
+  site_bodyid           1 
+  site_matid            -1 
+  site_group            0 
+  site_sameframe        0 
+  site_size             0.005     0.005     0.005    
+  site_pos              0         0         0.05     
+  site_quat             0.71      0.71      0         0        
+  site_rgba             0.5       0.5       0.5       1        
+
+SITE 6:
+  name                  lidar_site_6
+  site_type             2 
+  site_bodyid           1 
+  site_matid            -1 
+  site_group            0 
+  site_sameframe        0 
+  site_size             0.005     0.005     0.005    
+  site_pos              0         0         0.05     
+  site_quat             0.71      0.71      0         0        
+  site_rgba             0.5       0.5       0.5       1        
+
+SITE 7:
+  name                  lidar_site_7
+  site_type             2 
+  site_bodyid           1 
+  site_matid            -1 
+  site_group            0 
+  site_sameframe        0 
+  site_size             0.005     0.005     0.005    
+  site_pos              0         0         0.05     
+  site_quat             0.71      0.71      0         0        
+  site_rgba             0.5       0.5       0.5       1        
+
+SITE 8:
   name                  x_axis
   site_type             6 
   site_bodyid           1 
@@ -960,7 +1058,7 @@ SITE 0:
   site_quat             1         0         0         0        
   site_rgba             1         0         0         0.2      
 
-SITE 1:
+SITE 9:
   name                  y_axis
   site_type             6 
   site_bodyid           1 
@@ -972,7 +1070,7 @@ SITE 1:
   site_quat             0.71      0         0         0.71     
   site_rgba             0         1         0         0.2      
 
-SITE 2:
+SITE 10:
   name                  z_axis
   site_type             6 
   site_bodyid           1 
@@ -984,7 +1082,7 @@ SITE 2:
   site_quat            -0.71      0         0.71      0        
   site_rgba             0         0         1         0.2      
 
-SITE 3:
+SITE 11:
   name                  motor0
   site_type             5 
   site_bodyid           3 
@@ -996,7 +1094,7 @@ SITE 3:
   site_quat             1         0         0         0        
   site_rgba             0.3       0.8       0.3       1        
 
-SITE 4:
+SITE 12:
   name                  motor2
   site_type             5 
   site_bodyid           5 
@@ -1008,7 +1106,7 @@ SITE 4:
   site_quat             1         0         0         0        
   site_rgba             0.3       0.8       0.3       1        
 
-SITE 5:
+SITE 13:
   name                  motor1
   site_type             5 
   site_bodyid           7 
@@ -1020,7 +1118,7 @@ SITE 5:
   site_quat             1         0         0         0        
   site_rgba             0.3       0.8       0.3       1        
 
-SITE 6:
+SITE 14:
   name                  motor3
   site_type             5 
   site_bodyid           9 
@@ -1105,7 +1203,7 @@ ACTUATOR 0:
   actuator_dyntype      0 
   actuator_gaintype     0 
   actuator_biastype     0 
-  actuator_trnid        3  -1 
+  actuator_trnid        11  -1 
   actuator_group        0 
   actuator_ctrllimited  1 
   actuator_forcelimited 0 
@@ -1129,7 +1227,7 @@ ACTUATOR 1:
   actuator_dyntype      0 
   actuator_gaintype     0 
   actuator_biastype     0 
-  actuator_trnid        5  -1 
+  actuator_trnid        13  -1 
   actuator_group        0 
   actuator_ctrllimited  1 
   actuator_forcelimited 0 
@@ -1153,7 +1251,7 @@ ACTUATOR 2:
   actuator_dyntype      0 
   actuator_gaintype     0 
   actuator_biastype     0 
-  actuator_trnid        4  -1 
+  actuator_trnid        12  -1 
   actuator_group        0 
   actuator_ctrllimited  1 
   actuator_forcelimited 0 
@@ -1177,7 +1275,7 @@ ACTUATOR 3:
   actuator_dyntype      0 
   actuator_gaintype     0 
   actuator_biastype     0 
-  actuator_trnid        6  -1 
+  actuator_trnid        14  -1 
   actuator_group        0 
   actuator_ctrllimited  1 
   actuator_forcelimited 0 
@@ -1194,4 +1292,125 @@ ACTUATOR 3:
   actuator_length0      0        
   actuator_lengthrange  0         0        
   actuator_plugin       -1 
+
+
+SENSOR 0:
+  name                  lidar0
+  sensor_type           7 
+  sensor_datatype       1 
+  sensor_needstage      1 
+  sensor_objtype        6 
+  sensor_objid          0 
+  sensor_reftype        0 
+  sensor_refid          -1 
+  sensor_dim            1 
+  sensor_adr            0 
+  sensor_cutoff         0        
+  sensor_noise          0        
+  sensor_plugin         -1 
+
+SENSOR 1:
+  name                  lidar1
+  sensor_type           7 
+  sensor_datatype       1 
+  sensor_needstage      1 
+  sensor_objtype        6 
+  sensor_objid          1 
+  sensor_reftype        0 
+  sensor_refid          -1 
+  sensor_dim            1 
+  sensor_adr            1 
+  sensor_cutoff         0        
+  sensor_noise          0        
+  sensor_plugin         -1 
+
+SENSOR 2:
+  name                  lidar2
+  sensor_type           7 
+  sensor_datatype       1 
+  sensor_needstage      1 
+  sensor_objtype        6 
+  sensor_objid          2 
+  sensor_reftype        0 
+  sensor_refid          -1 
+  sensor_dim            1 
+  sensor_adr            2 
+  sensor_cutoff         0        
+  sensor_noise          0        
+  sensor_plugin         -1 
+
+SENSOR 3:
+  name                  lidar3
+  sensor_type           7 
+  sensor_datatype       1 
+  sensor_needstage      1 
+  sensor_objtype        6 
+  sensor_objid          3 
+  sensor_reftype        0 
+  sensor_refid          -1 
+  sensor_dim            1 
+  sensor_adr            3 
+  sensor_cutoff         0        
+  sensor_noise          0        
+  sensor_plugin         -1 
+
+SENSOR 4:
+  name                  lidar4
+  sensor_type           7 
+  sensor_datatype       1 
+  sensor_needstage      1 
+  sensor_objtype        6 
+  sensor_objid          4 
+  sensor_reftype        0 
+  sensor_refid          -1 
+  sensor_dim            1 
+  sensor_adr            4 
+  sensor_cutoff         0        
+  sensor_noise          0        
+  sensor_plugin         -1 
+
+SENSOR 5:
+  name                  lidar5
+  sensor_type           7 
+  sensor_datatype       1 
+  sensor_needstage      1 
+  sensor_objtype        6 
+  sensor_objid          5 
+  sensor_reftype        0 
+  sensor_refid          -1 
+  sensor_dim            1 
+  sensor_adr            5 
+  sensor_cutoff         0        
+  sensor_noise          0        
+  sensor_plugin         -1 
+
+SENSOR 6:
+  name                  lidar6
+  sensor_type           7 
+  sensor_datatype       1 
+  sensor_needstage      1 
+  sensor_objtype        6 
+  sensor_objid          6 
+  sensor_reftype        0 
+  sensor_refid          -1 
+  sensor_dim            1 
+  sensor_adr            6 
+  sensor_cutoff         0        
+  sensor_noise          0        
+  sensor_plugin         -1 
+
+SENSOR 7:
+  name                  lidar7
+  sensor_type           7 
+  sensor_datatype       1 
+  sensor_needstage      1 
+  sensor_objtype        6 
+  sensor_objid          7 
+  sensor_reftype        0 
+  sensor_refid          -1 
+  sensor_dim            1 
+  sensor_adr            7 
+  sensor_cutoff         0        
+  sensor_noise          0        
+  sensor_plugin         -1 
 

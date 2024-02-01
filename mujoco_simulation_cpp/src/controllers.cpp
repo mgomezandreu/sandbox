@@ -66,13 +66,30 @@ namespace DroneStabilization{
 
     Eigen::Vector3d pos_des(double t){
         Eigen::Vector3d pos;
-        pos << 0 + 0.5*sin(t), 0.5*sin(0.5*t) , z_des;
+        pos << 0 + 0.5*sin(t), 0.5*sin(0.5*t) , z_des + 0.5 + sin(t);
         return pos;
     }
 
+    void printLidar(const mjModel *m, mjData *d){
+        for (int i = 0; i < 8; ++i) {
+            std::string sensorName = "lidar" + std::to_string(i);
+            int sensorIndex = mj_name2id(m, mjOBJ_SENSOR, sensorName.c_str());
+            double rangeReading = d->sensordata[sensorIndex];
+
+            std::cout << i << ": " << rangeReading << " | ";
+            // Use rangeReading as needed
+        }
+        std::cout << std::endl;
+    }
+
+
+
     
     void control(const mjModel *m, mjData *d){
-        // system("clear");
+        system("clear");
+        printLidar(m, d);
+
+
 
         mjtNum time = d->time;
 

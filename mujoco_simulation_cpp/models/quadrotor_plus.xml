@@ -30,6 +30,17 @@ Front: Along body X-axis
             <geom name="arm_back0" type="box" pos="-.08 0 0" size=".04 .005 .005" quat="0 0 0 1" rgba=".8 .8 .8 1" mass=".02"/>
             <geom name="arm_left0" type="box" pos="0 .08 0" size=".04 .005 .005" quat=".707 0 0 .707" rgba=".8 .8 .8 1" mass=".02"/>
             <geom name="arm_right0" type="box" pos="0 -.08 0" size=".04 .005 .005" quat=".707 0 0 -.707" rgba=".8 .8 .8 1" mass=".02"/>
+        
+            <site name="lidar_site_0" pos="0 0 0.05" zaxis="1 0 0" />
+            <site name="lidar_site_1" pos="0 0 0.05" zaxis="0 1 0" />
+            <site name="lidar_site_2" pos="0 0 0.05" zaxis="-1 0 0 " />
+            <site name="lidar_site_3" pos="0 0 0.05" zaxis="0 -1 0" />
+            <site name="lidar_site_4" pos="0 0 0.05" euler="90 0 0" />
+            <site name="lidar_site_5" pos="0 0 0.05" euler="90 0 0" />
+            <site name="lidar_site_6" pos="0 0 0.05" euler="90 0 0 " />
+            <site name="lidar_site_7" pos="0 0 0.05" euler="90 0 0" />
+
+
 
             <body name="arm_front1" pos=".12 0 0">
                 <geom type="box" pos=".01 0 .005" size=".01 .005 .01" quat="1 0 0 0" rgba="1 .1 0 1" mass=".02"/>
@@ -88,7 +99,17 @@ Front: Along body X-axis
         
     </worldbody>
 
+    <sensor>
+        <rangefinder name="lidar0"  site="lidar_site_0"  />
+        <rangefinder name="lidar1"  site="lidar_site_1"  />
+        <rangefinder name="lidar2"  site="lidar_site_2"  />
+        <rangefinder name="lidar3"  site="lidar_site_3"  />
+        <rangefinder name="lidar4"  site="lidar_site_4"  />
+        <rangefinder name="lidar5"  site="lidar_site_5"  />
+        <rangefinder name="lidar6"  site="lidar_site_6"  />
+        <rangefinder name="lidar7"  site="lidar_site_7"  />
 
+    </sensor>
 
     <actuator>
         <motor ctrllimited="true" ctrlrange="0 10" gear="0  0. 1. 0. 0. -0.1" site="motor0"/>

@@ -21,3 +21,45 @@ ERROR: Load model error: XML Error: Schema violation: unrecognized element
 Element 'body', line 74
 
 
+Thu Feb  1 21:46:57 2024
+ERROR: Load model error: XML Error: Schema violation: unrecognized element
+
+Element 'sensor', line 35
+
+
+Thu Feb  1 21:47:27 2024
+ERROR: Load model error: XML Error: Schema violation: unrecognized attribute: 'name'
+
+Element 'sensor', line 97
+
+
+Thu Feb  1 21:49:04 2024
+ERROR: Load model error: XML Error: Schema violation: unrecognized attribute: 'type'
+
+Element 'sensor', line 97
+
+
+Thu Feb  1 21:49:48 2024
+ERROR: Load model error: XML Error: Schema violation: unrecognized element
+
+Element 'range', line 98
+
+
+Thu Feb  1 21:50:33 2024
+ERROR: Load model error: XML Error: Schema violation: unrecognized attribute: 'fov'
+
+Element 'rangefinder', line 98
+
+
+Thu Feb  1 22:13:18 2024
+ERROR: Load model error: XML Error: Schema violation: unrecognized attribute: 'z_axis'
+
+Element 'site', line 34
+
+
+Thu Feb  1 22:14:35 2024
+ERROR: Load model error: XML Error: Schema violation: unrecognized attribute: 'z_axis'
+
+Element 'site', line 37
+
+
