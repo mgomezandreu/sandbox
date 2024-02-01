@@ -15,3 +15,9 @@ WARNING: Nan, Inf or huge value in CTRL at ACTUATOR 0. The simulation is unstabl
 Sat Jan 27 22:24:30 2024
 WARNING: Nan, Inf or huge value in CTRL at ACTUATOR 0. The simulation is unstable. Time = 0.0000.
 
+Thu Feb  1 20:31:23 2024
+ERROR: Load model error: XML Error: Schema violation: unrecognized element
+
+Element 'body', line 74
+
+

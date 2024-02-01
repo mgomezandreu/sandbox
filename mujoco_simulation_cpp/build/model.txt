@@ -4,21 +4,21 @@ model name     quadrotorplus
 nq                    7
 nv                    6
 nu                    4
-nbody                 10
+nbody                 14
 njnt                  1
-ngeom                 14
+ngeom                 18
 nsite                 7
 nlight                1
 ntex                  3
 ntexdata              500322
 nmat                  2
-nnames                264
+nnames                288
 nM                    21
 nD                    36
 njmax                 -1
 nconmax               -1
-nstack                1680769
-nbuffer               516168
+nstack                1680929
+nbuffer               518816
 
 timestep              0.01    
 apirate               1e+02   
@@ -45,13 +45,13 @@ magnetic              0        -0.5       0
 o_solref              0.02      1        
 o_solimp              0.9       0.95      0.001     0.5       2        
 
-totalmass             0.28    
+totalmass             1.9     
 
 meaninertia           0.14    
-meanmass              0.031   
-meansize              0.042   
-extent                1       
-center                0        0        0       
+meanmass              0.14    
+meansize              0.34    
+extent                3       
+center                0        0        0.1     
 
 qpos0                 0         0         0.2       1         0         0         0        
 
@@ -77,7 +77,7 @@ BODY 0:
   body_ipos             0         0         0        
   body_iquat            1         0         0         0        
   body_mass             0        
-  body_subtreemass      0.28     
+  body_subtreemass      1.9      
   body_inertia          0         0         0        
   body_invweight0       0         0        
   body_plugin           -1 
@@ -296,6 +296,102 @@ BODY 9:
   body_subtreemass      0.005    
   body_inertia          3.1e-06   3.1e-06   6.3e-06  
   body_invweight0       11        6.9e+02  
+  body_plugin           -1 
+
+BODY 10:
+  name                  box1
+  body_parentid         0 
+  body_rootid           10 
+  body_weldid           0 
+  body_mocapid          -1 
+  body_jntnum           0 
+  body_jntadr           -1 
+  body_dofnum           0 
+  body_dofadr           -1 
+  body_geomnum          1 
+  body_geomadr          14 
+  body_simple           1 
+  body_sameframe        1 
+  body_pos              0.5       0.5       0.1      
+  body_quat             1         0         0         0        
+  body_ipos             0         0         0        
+  body_iquat            1         0         0         0        
+  body_mass             0.4      
+  body_subtreemass      0.4      
+  body_inertia          0.13      0.13      0.0027   
+  body_invweight0       0         0        
+  body_plugin           -1 
+
+BODY 11:
+  name                  box2
+  body_parentid         0 
+  body_rootid           11 
+  body_weldid           0 
+  body_mocapid          -1 
+  body_jntnum           0 
+  body_jntadr           -1 
+  body_dofnum           0 
+  body_dofadr           -1 
+  body_geomnum          1 
+  body_geomadr          15 
+  body_simple           1 
+  body_sameframe        1 
+  body_pos             -0.5       0.5       0.1      
+  body_quat             1         0         0         0        
+  body_ipos             0         0         0        
+  body_iquat            1         0         0         0        
+  body_mass             0.4      
+  body_subtreemass      0.4      
+  body_inertia          0.13      0.13      0.0027   
+  body_invweight0       0         0        
+  body_plugin           -1 
+
+BODY 12:
+  name                  box3
+  body_parentid         0 
+  body_rootid           12 
+  body_weldid           0 
+  body_mocapid          -1 
+  body_jntnum           0 
+  body_jntadr           -1 
+  body_dofnum           0 
+  body_dofadr           -1 
+  body_geomnum          1 
+  body_geomadr          16 
+  body_simple           1 
+  body_sameframe        1 
+  body_pos              0.5      -0.5       0.1      
+  body_quat             1         0         0         0        
+  body_ipos             0         0         0        
+  body_iquat            1         0         0         0        
+  body_mass             0.4      
+  body_subtreemass      0.4      
+  body_inertia          0.13      0.13      0.0027   
+  body_invweight0       0         0        
+  body_plugin           -1 
+
+BODY 13:
+  name                  box4
+  body_parentid         0 
+  body_rootid           13 
+  body_weldid           0 
+  body_mocapid          -1 
+  body_jntnum           0 
+  body_jntadr           -1 
+  body_dofnum           0 
+  body_dofadr           -1 
+  body_geomnum          1 
+  body_geomadr          17 
+  body_simple           1 
+  body_sameframe        1 
+  body_pos             -0.5      -0.5       0.1      
+  body_quat             1         0         0         0        
+  body_ipos             0         0         0        
+  body_iquat            1         0         0         0        
+  body_mass             0.4      
+  body_subtreemass      0.4      
+  body_inertia          0.13      0.13      0.0027   
+  body_invweight0       0         0        
   body_plugin           -1 
 
 
@@ -751,6 +847,106 @@ GEOM 13:
   geom_fluid            0         0         0         0         0         0         0         0         0         0         0         0        
   geom_rgba             0.3       1         0.3       0.3      
 
+GEOM 14:
+  name                  
+  geom_type             6 
+  geom_contype          1 
+  geom_conaffinity      1 
+  geom_condim           3 
+  geom_bodyid           10 
+  geom_dataid           -1 
+  geom_matid            -1 
+  geom_group            0 
+  geom_priority         0 
+  geom_sameframe        1 
+  geom_solmix           1        
+  geom_solref           0.02      1        
+  geom_solimp           0.9       0.95      0.001     0.5       2        
+  geom_size             0.1       0.1       1        
+  geom_rbound           1        
+  geom_pos              0         0         0        
+  geom_quat             1         0         0         0        
+  geom_friction         1         0.5       0.5      
+  geom_margin           0.01     
+  geom_gap              0        
+  geom_fluid            0         0         0         0         0         0         0         0         0         0         0         0        
+  geom_rgba             0.8       0.6       0.4       1        
+
+GEOM 15:
+  name                  
+  geom_type             6 
+  geom_contype          1 
+  geom_conaffinity      1 
+  geom_condim           3 
+  geom_bodyid           11 
+  geom_dataid           -1 
+  geom_matid            -1 
+  geom_group            0 
+  geom_priority         0 
+  geom_sameframe        1 
+  geom_solmix           1        
+  geom_solref           0.02      1        
+  geom_solimp           0.9       0.95      0.001     0.5       2        
+  geom_size             0.1       0.1       1        
+  geom_rbound           1        
+  geom_pos              0         0         0        
+  geom_quat             1         0         0         0        
+  geom_friction         1         0.5       0.5      
+  geom_margin           0.01     
+  geom_gap              0        
+  geom_fluid            0         0         0         0         0         0         0         0         0         0         0         0        
+  geom_rgba             0.8       0.6       0.4       1        
+
+GEOM 16:
+  name                  
+  geom_type             6 
+  geom_contype          1 
+  geom_conaffinity      1 
+  geom_condim           3 
+  geom_bodyid           12 
+  geom_dataid           -1 
+  geom_matid            -1 
+  geom_group            0 
+  geom_priority         0 
+  geom_sameframe        1 
+  geom_solmix           1        
+  geom_solref           0.02      1        
+  geom_solimp           0.9       0.95      0.001     0.5       2        
+  geom_size             0.1       0.1       1        
+  geom_rbound           1        
+  geom_pos              0         0         0        
+  geom_quat             1         0         0         0        
+  geom_friction         1         0.5       0.5      
+  geom_margin           0.01     
+  geom_gap              0        
+  geom_fluid            0         0         0         0         0         0         0         0         0         0         0         0        
+  geom_rgba             0.8       0.6       0.4       1        
+
+GEOM 17:
+  name                  
+  geom_type             6 
+  geom_contype          1 
+  geom_conaffinity      1 
+  geom_condim           3 
+  geom_bodyid           13 
+  geom_dataid           -1 
+  geom_matid            -1 
+  geom_group            0 
+  geom_priority         0 
+  geom_sameframe        1 
+  geom_solmix           1        
+  geom_solref           0.02      1        
+  geom_solimp           0.9       0.95      0.001     0.5       2        
+  geom_size             0.1       0.1       1        
+  geom_rbound           1        
+  geom_pos              0         0         0        
+  geom_quat             1         0         0         0        
+  geom_friction         1         0.5       0.5      
+  geom_margin           0.01     
+  geom_gap              0        
+  geom_fluid            0         0         0         0         0         0         0         0         0         0         0         0        
+  geom_rgba             0.8       0.6       0.4       1        
+
 
 SITE 0:
   name                  x_axis
@@ -847,7 +1043,7 @@ LIGHT 0:
   light_active          1 
   light_pos             0         0         1.3      
   light_dir            -0         0        -1        
-  light_poscom0         0         0         1.1      
+  light_poscom0         0         0         1.2      
   light_pos0            0         0         1.3      
   light_dir0           -0         0        -1        
   light_attenuation     1         0         0        

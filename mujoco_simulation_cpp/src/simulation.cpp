@@ -69,8 +69,6 @@ void Simulation::run_simulation(std::string path, void (*controller)(const mjMod
 		std::cout << "Drone position: " << d->qpos[0] << std::endl;
 
 		// set camera to follow quadrotor
-
-
 		while( d->time - simstart < 1.0/60.0)
 			mj_step(m, d);
 
