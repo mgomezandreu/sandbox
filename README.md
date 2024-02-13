@@ -5,6 +5,6 @@ Still, something interesting make come out of one of them so feel free to look a
 
 - A few simple Mujuco environments to which I apply my knowledge in control in CPP
 - A study into representing trajectories as B - Splines and optimizing there parameters in a obstracle constraint problem
-
+- A study into Transfer Functions and Robust control
 
 
